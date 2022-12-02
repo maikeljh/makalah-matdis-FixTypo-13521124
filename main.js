@@ -1,4 +1,4 @@
-import { dictionary, words, djikstra, graph } from "./dictionary.js";
+import { dictionary, words, djikstra, graph } from "./main-algo.js";
 
 // Mendapatkan element button
 var clickMe = document.getElementById("click-me");
