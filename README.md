@@ -1,4 +1,4 @@
-# Aplikasi Algoritma Djikstra dalam Membetulkan Kesalahan Tipografi Dengan Javascript
+# Aplikasi Algoritma Dijkstra dalam Membetulkan Kesalahan Tipografi Dengan Javascript
 ### By : Michael Jonathan Halim - 13521124
 
 # Deskripsi Tugas
