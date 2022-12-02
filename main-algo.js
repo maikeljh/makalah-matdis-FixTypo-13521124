@@ -247,7 +247,7 @@ const minimumCostNode = (costs, processed) => {
   }, null);
 };
 
-const djikstra = (graph, A, B) => {
+const dijkstra = (graph, A, B) => {
   let temp_graph = { ...graph };
   delete temp_graph[B];
   temp_graph[B] = {};
@@ -302,4 +302,4 @@ const djikstra = (graph, A, B) => {
   return costs[`${B}`];
 };
 
-export { dictionary, words, graph, djikstra };
+export { dictionary, words, graph, dijkstra };

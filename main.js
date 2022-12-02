@@ -1,4 +1,4 @@
-import { dictionary, words, djikstra, graph } from "./main-algo.js";
+import { dictionary, words, dijkstra, graph } from "./main-algo.js";
 
 // Mendapatkan element button
 var clickMe = document.getElementById("click-me");
@@ -43,7 +43,7 @@ clickMe.onclick = function () {
             if (char === val[idx]) {
               dist += 0;
             } else {
-              dist += djikstra(graph, char, val[idx]);
+              dist += dijkstra(graph, char, val[idx]);
             }
             idx++;
           }
