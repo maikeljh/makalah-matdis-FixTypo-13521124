@@ -2209,6 +2209,7 @@ buah
 buang
 buangan
 buas
+buat
 buatan
 buaya
 bubu
@@ -2352,6 +2353,7 @@ caos
 cap
 capaian
 caping
+cara
 caracat
 carakawati
 carang
@@ -6524,6 +6526,7 @@ majir
 mak
 maka
 makadasang
+makalah
 makam
 makan
 makan-makanan
@@ -7057,6 +7060,7 @@ membongmeh
 membuahkan
 membualkan
 membuang
+membuat
 membuatkan
 membukakan
 membukukan
@@ -8568,6 +8572,7 @@ menyemprot
 menyemprotkan
 menyemukan
 menyenangi
+menyenangkan
 menyenaraikan
 menyendeng
 menyendengkan
