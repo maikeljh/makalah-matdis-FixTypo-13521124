@@ -114,7 +114,7 @@ let graph_temporary_qwerty = {
     ["S", "A", 1],
     ["S", "Q", 1],
     ["S", "W", 1],
-    ["S", "e", 1],
+    ["S", "E", 1],
   ],
   D: [
     ["D", "F", 1],
@@ -237,14 +237,17 @@ for (let item of Object.keys(graph_temporary_qwerty)) {
 
 // Mencari node dengan bobot terendah yang belum diproses
 const minimumCostNode = (costs, processed) => {
-  return Object.keys(costs).reduce((lowest, node) => {
-    if (lowest === null || costs[node] < costs[lowest]) {
+  let minimum = null;
+  // Iterasi setiap node pada object costs
+  for (let node of Object.keys(costs)) {
+    // Mencari node dengan bobot terendah
+    if (minimum === null || costs[node] < costs[minimum]) {
       if (!processed.includes(node)) {
-        lowest = node;
+        minimum = node;
       }
     }
-    return lowest;
-  }, null);
+  }
+  return minimum;
 };
 
 const dijkstra = (graph, A, B) => {
@@ -254,12 +257,6 @@ const dijkstra = (graph, A, B) => {
 
   // Inisiasi Object Cost Minimum Ke Setiap Node
   const costs = Object.assign({ [`${B}`]: Infinity }, temp_graph[`${A}`]);
-
-  // Inisiasi Track
-  const parents = { [`${B}`]: null };
-  for (let child in temp_graph[`${A}`]) {
-    parents[child] = A;
-  }
 
   // Inisiasi Array Untuk Node Yang Sudah Diproses
   // Sudah diproses artinya kita sudah pernah menghitung bobot untuk menjangkaunya dari starting node
@@ -281,13 +278,11 @@ const dijkstra = (graph, A, B) => {
       let newCost = cost + children[child];
       if (!costs[child]) {
         costs[child] = newCost;
-        parents[child] = node;
       }
 
       // Jika bobot baru lebih kecil dari bobot semula
       if (newCost < costs[child]) {
         costs[child] = newCost;
-        parents[child] = node;
       }
     }
 
